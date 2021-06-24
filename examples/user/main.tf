@@ -6,6 +6,8 @@ module "user" {
   name = "dice-test-user-1"
   policy_description = "dice-test-user-1"
 
+  policies = [""]
+
 #  policy = <<EOF
 #EOF
 }

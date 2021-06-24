@@ -49,6 +49,13 @@ resource "aws_iam_user_policy_attachment" "this" {
   policy_arn = aws_iam_policy.this[0].arn
 }
 
+
+resource "aws_iam_user_policy_attachment" "these" {
+  count = var.policies != null ? length(var.policies) : 0
+  policy_arn = var.policies
+  user = aws_iam_user.this.name
+}
+
 # ###############
 # User Access Key
 # ###############

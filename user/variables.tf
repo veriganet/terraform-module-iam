@@ -25,6 +25,12 @@ variable "policy" {
   default     = null
 }
 
+variable "policies" {
+  description = "List of policy ARNs"
+  type = list(string)
+  default = null
+}
+
 variable "policy_description" {
   description = "Description for the policy"
   type        = string
