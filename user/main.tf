@@ -52,7 +52,7 @@ resource "aws_iam_user_policy_attachment" "this" {
 
 resource "aws_iam_user_policy_attachment" "these" {
   count = var.policies != null ? length(var.policies) : 0
-  policy_arn = var.policies
+  policy_arn = var.policies[count.index]
   user = aws_iam_user.this.name
 }
 
