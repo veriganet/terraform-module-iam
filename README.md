@@ -1,2 +1,2 @@
 # terraform-module-iam
-terraform module for AWS IAM
+Module for all AWS IAM related infrastructure
